@@ -3,22 +3,114 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: rgb(192, 203, 138);
+    width: 28%;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+h1 {
+    margin-top: -20px;
+    margin-bottom: 20px;
+    font-size: 44px;
 }
 
 .form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+    gap: 1rem;
 }
 
-label {
+.label {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-weight: bold;
+}
+
+.labelText {
     display: block;
-    margin-top: 1rem;
-    margin-bottom: 10px;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
 }
 
-h1 {
-    margin-bottom: 20px;
-    font-size: 44px;
+.input {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
 }
+
+.fieldset {
+    border: 1px solid #333;
+    border-radius: 4px;
+    padding: 1rem;
+    margin: 0;
+}
+
+.legend {
+    font-weight: bold;
+    padding: 0 0.5rem;
+}
+
+.addressRow {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.addressField {
+    flex: 1;
+}
+
+.addressField.city {
+    flex: 1; 
+}
+
+.addressField.state {
+    flex: 0.5;
+}
+
+.addressField.zip {
+    flex: 1;
+}
+
+.addressField.city .input {
+    max-width: 120px;
+}
+
+.addressField.state .input {
+    max-width: 80px;
+}
+
+.addressField.zip .input {
+    max-width: 80px;
+}
+
+.saveButton {
+    background-color: #fff8e5;
+    color: #333;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+    width: 120px;
+    align-self: center;
+}
+
+.saveButton:hover {
+    background-color: #f0e6c7; 
+}
+
+.saveButton:active {
+    background-color: #f0e6c7; 
+}
+

@@ -1,0 +1,25 @@
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4rem 4rem 4rem;
+  position: relative;
+}
+
+.logo {
+  width: 85px;
+  height: 85px;
+}
+
+.title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}

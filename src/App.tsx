@@ -1,9 +1,12 @@
 import { CreateEmployee } from './pages/CreateEmployee/CreateEmployee'
-import './App.css'
+import Header from './components/features/layout/Header'
 
 function App() {
   return (
-    <CreateEmployee />
+    <>
+      <Header/>
+      <CreateEmployee />
+    </>
   )
 }
 
