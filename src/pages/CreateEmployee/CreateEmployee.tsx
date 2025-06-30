@@ -1,5 +1,6 @@
 import styles from './CreateEmployee.module.css';
 import { useState } from 'react';
+import { states } from '../../data/states';
 
 export function CreateEmployee() {
   const [firstName, setFirstName] = useState('');
@@ -93,13 +94,19 @@ export function CreateEmployee() {
                 
                 <div className={`${styles.addressField} ${styles.state}`}>
                 <label className={styles.labelText}>State:</label>
-                <input
+                <select
                     className={styles.input}
-                    type="text"
                     value={state}
                     onChange={(e) => setState(e.target.value)}
                     required
-                />
+                >
+                    <option value="">Select a state</option>
+                    {states.map((state) => (
+                        <option key={state.abbreviation} value={state.name}>
+                            {state.name} ({state.abbreviation})
+                        </option>
+                    ))}
+                </select> 
                 </div>
                 
                 <div className={`${styles.addressField} ${styles.zip}`}>
@@ -117,13 +124,18 @@ export function CreateEmployee() {
         
         <div>
           <label className={styles.labelText}>Department:</label>
-          <input
+          <select
             className={styles.input}
-            type="text"
             value={department}
             onChange={(e) => setDepartment(e.target.value)}
             required
-          />
+          >
+          <option>Sales</option>
+          <option>Marketing</option>
+          <option>Engineering</option>
+          <option>Human Resources</option>
+          <option>Legal</option>
+          </select>
         </div>
         
         <button type="submit" className={styles.saveButton}>Save</button>
