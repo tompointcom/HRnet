@@ -1,14 +1,21 @@
-import { CreateEmployee } from './pages/CreateEmployee/CreateEmployee'
-import Header from './components/features/layout/Header/Header'
-import Footer from './components/features/layout/Footer/Footer'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import CreateEmployee from './pages/CreateEmployee/CreateEmployee';
+import CurrentEmployees from './pages/CurrentEmployees/CurrentEmployees';
+import Header from './components/layout/Header/Header';
+import Footer from './components/layout/Footer/Footer';
 
 function App() {
   return (
-    <>
-      <Header/>
-      <CreateEmployee />
+    <Router>
+      <Header />
+      <main>
+        <Routes>
+          <Route path="/" element={<CreateEmployee />} />
+          <Route path="/current-employees" element={<CurrentEmployees />} />
+        </Routes>
+      </main>
       <Footer />
-    </>
+    </Router>
   )
 }
 

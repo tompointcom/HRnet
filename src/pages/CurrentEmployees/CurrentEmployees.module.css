@@ -1,0 +1,104 @@
+.titleContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    padding: 1rem;
+}
+
+.titleContainer h1 {
+    margin: 0;
+    font-size: 44px;
+    text-align: center;
+}
+
+.container {
+  padding: 2rem;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.titleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  padding: 1rem;
+}
+
+.titleContainer h1 {
+  margin: 0;
+  font-size: 44px;
+  text-align: center;
+}
+
+.tableControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.showEntries select {
+  margin: 0 0.5rem;
+  padding: 0.25rem;
+}
+
+.search input {
+  margin-left: 0.5rem;
+  padding: 0.25rem;
+}
+
+.employeeTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.employeeTable th,
+.employeeTable td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.employeeTable th {
+  background-color: rgb(192, 203, 138);
+  font-weight: bold;
+}
+
+.employeeTable tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.tableFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.pagination button {
+  margin: 0 0.25rem;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination .active {
+  background-color: rgb(192, 203, 138);
+  color: #333;
+}
+
+.homeLink {
+  text-align: center;
+}
+
+.homeLink a {
+    color: rgb(192, 203, 138);
+  text-decoration: none;
+}

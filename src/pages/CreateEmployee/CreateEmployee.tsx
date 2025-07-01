@@ -2,7 +2,7 @@ import styles from './CreateEmployee.module.css';
 import { useState } from 'react';
 import { states } from '../../data/states';
 
-export function CreateEmployee() {
+function CreateEmployee() {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [dateOfBirth, setDateOfBirth] = useState('');
@@ -15,7 +15,40 @@ export function CreateEmployee() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log({ firstName, lastName, dateOfBirth, startDate, street, city, state, zipCode, department });
+    
+    const newEmployee = {
+      firstName,
+      lastName,
+      dateOfBirth,
+      startDate,
+      street,
+      city,
+      state,
+      zipCode,
+      department
+    };
+
+    // Récupérer les employés existants depuis localStorage
+    const existingEmployees = JSON.parse(localStorage.getItem('employees') || '[]');
+    
+    // Ajouter le nouvel employé
+    const updatedEmployees = [...existingEmployees, newEmployee];
+    
+    // Sauvegarder dans localStorage
+    localStorage.setItem('employees', JSON.stringify(updatedEmployees));
+    
+    // Réinitialiser le formulaire
+    setFirstName('');
+    setLastName('');
+    setDateOfBirth('');
+    setStartDate('');
+    setStreet('');
+    setCity('');
+    setState('');
+    setZipCode('');
+    setDepartment('');
+    
+    alert('Employee saved successfully!');
   };
 
   return (
@@ -124,18 +157,19 @@ export function CreateEmployee() {
         
         <div>
           <label className={styles.labelText}>Department:</label>
-          <select
-            className={styles.input}
-            value={department}
-            onChange={(e) => setDepartment(e.target.value)}
-            required
-          >
-          <option>Sales</option>
-          <option>Marketing</option>
-          <option>Engineering</option>
-          <option>Human Resources</option>
-          <option>Legal</option>
-          </select>
+            <select
+              className={styles.input}
+              value={department}
+              onChange={(e) => setDepartment(e.target.value)}
+              required
+            >
+              <option value="">Select Department</option>
+              <option value="Sales">Sales</option>
+              <option value="Marketing">Marketing</option>
+              <option value="Engineering">Engineering</option>
+              <option value="Human Resources">Human Resources</option>
+              <option value="Legal">Legal</option>
+            </select>
         </div>
         
         <button type="submit" className={styles.saveButton}>Save</button>
@@ -143,3 +177,5 @@ export function CreateEmployee() {
     </div>
   );
 }
+
+export default CreateEmployee;
