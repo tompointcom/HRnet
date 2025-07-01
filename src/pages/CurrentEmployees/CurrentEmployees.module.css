@@ -102,3 +102,7 @@
     color: rgb(192, 203, 138);
   text-decoration: none;
 }
+
+.noEmployees {
+    text-align: center;
+}

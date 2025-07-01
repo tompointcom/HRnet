@@ -12,6 +12,8 @@ function CreateEmployee() {
   const [state, setState] = useState('');
   const [zipCode, setZipCode] = useState('');
   const [department, setDepartment] = useState('');
+    const [showModal, setShowModal] = useState(false);
+
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -48,7 +50,11 @@ function CreateEmployee() {
     setZipCode('');
     setDepartment('');
     
-    alert('Employee saved successfully!');
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
   };
 
   return (
@@ -174,6 +180,21 @@ function CreateEmployee() {
         
         <button type="submit" className={styles.saveButton}>Save</button>
       </form>
+
+      {/* Modale de confirmation */}
+      {showModal && (
+        <div className={styles.modalOverlay}>
+          <div className={styles.modal}>
+            <div className={styles.modalContent}>
+              <h2>Employee Created!</h2>
+              <p>The employee has been successfully added to the database.</p>
+              <button onClick={closeModal} className={styles.modalButton}>
+                OK
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

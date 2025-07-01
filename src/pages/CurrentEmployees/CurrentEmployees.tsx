@@ -82,7 +82,7 @@ function CurrentEmployees() {
             ))
           ) : (
             <tr>
-              <td colSpan={9} style={{ textAlign: 'center' }}>
+              <td colSpan={9} className={styles.noEmployees}>
                 No employees found
               </td>
             </tr>
