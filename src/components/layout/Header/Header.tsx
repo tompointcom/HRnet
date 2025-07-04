@@ -5,7 +5,7 @@ import styles from "./Header.module.css";
 
 const Header: React.FC = () => (
 
-    <header className={styles.headerContainer}>
+    <header data-testid="header" className={styles.headerContainer}>
         <img className={styles.logo} src={logo} alt="logo" />
         <a className={styles.title} href="/">HRnet</a>
         <nav>
