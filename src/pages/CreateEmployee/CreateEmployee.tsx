@@ -64,8 +64,9 @@ function CreateEmployee() {
       <h1>Create Employee</h1>
       <form onSubmit={handleSubmit} className={styles.form}>
         <div>
-          <label className={styles.labelText}>First Name:</label>
+          <label className={styles.labelText} htmlFor='firstName'>First Name:</label>
           <input
+            id='firstName'
             className={styles.input}
             type="text"
             value={firstName}
@@ -75,8 +76,9 @@ function CreateEmployee() {
         </div>
         
         <div>
-          <label className={styles.labelText}>Last Name:</label>
+          <label className={styles.labelText} htmlFor='lastName'>Last Name:</label>
           <input
+            id='lastName'
             className={styles.input}
             type="text"
             value={lastName}
@@ -86,8 +88,9 @@ function CreateEmployee() {
         </div>
         
         <div>
-          <label className={styles.labelText}>Date of Birth:</label>
+          <label className={styles.labelText} htmlFor='dateOfBirth'>Date of Birth:</label>
           <input
+            id='dateOfBirth'
             className={styles.input}
             type="date"
             value={dateOfBirth}
@@ -97,8 +100,9 @@ function CreateEmployee() {
         </div>
         
         <div>
-          <label className={styles.labelText}>Start Date:</label>
+          <label className={styles.labelText} htmlFor='startDate'>Start Date:</label>
           <input
+            id='startDate'
             className={styles.input}
             type="date"
             value={startDate}
@@ -111,8 +115,9 @@ function CreateEmployee() {
             <legend className={styles.legend}>Address</legend>
             
             <div>
-                <label className={styles.labelText}>Street:</label>
+                <label className={styles.labelText} htmlFor='street'>Street:</label>
                 <input
+                id='street'
                 className={styles.input}
                 type="text"
                 value={street}
@@ -123,8 +128,9 @@ function CreateEmployee() {
             
             <div className={styles.addressRow}>
                 <div className={`${styles.addressField} ${styles.city}`}>
-                <label className={styles.labelText}>City:</label>
+                <label className={styles.labelText} htmlFor='city'>City:</label>
                 <input
+                    id='city'
                     className={styles.input}
                     type="text"
                     value={city}
@@ -134,8 +140,9 @@ function CreateEmployee() {
                 </div>
                 
                 <div className={`${styles.addressField} ${styles.state}`}>
-                <label className={styles.labelText}>State:</label>
+                <label className={styles.labelText} htmlFor='state'>State:</label>
                 <select
+                    id='state'
                     className={styles.input}
                     value={state}
                     onChange={(e) => setState(e.target.value)}
@@ -151,8 +158,9 @@ function CreateEmployee() {
                 </div>
                 
                 <div className={`${styles.addressField} ${styles.zip}`}>
-                <label className={styles.labelText}>Zip:</label>
+                <label className={styles.labelText} htmlFor='zip'>Zip:</label>
                 <input
+                    id='zip'
                     className={styles.input}
                     type="text"
                     value={zipCode}
@@ -164,8 +172,9 @@ function CreateEmployee() {
         </fieldset>
         
         <div>
-          <label className={styles.labelText}>Department:</label>
+          <label className={styles.labelText} htmlFor='department'>Department:</label>
             <select
+              id='department'
               className={styles.input}
               value={department}
               onChange={(e) => setDepartment(e.target.value)}
