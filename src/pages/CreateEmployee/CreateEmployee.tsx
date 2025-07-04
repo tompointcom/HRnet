@@ -1,6 +1,8 @@
 import styles from './CreateEmployee.module.css';
 import { useState } from 'react';
 import { states } from '../../data/states';
+import { ConfirmationModal } from 'p14-modale';
+
 
 function CreateEmployee() {
   const [firstName, setFirstName] = useState('');
@@ -182,19 +184,13 @@ function CreateEmployee() {
       </form>
 
       {/* Modale de confirmation */}
-      {showModal && (
-        <div className={styles.modalOverlay}>
-          <div className={styles.modal}>
-            <div className={styles.modalContent}>
-              <h2>Employee Created!</h2>
-              <p>The employee has been successfully added to the database.</p>
-              <button onClick={closeModal} className={styles.modalButton}>
-                OK
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+      <ConfirmationModal
+        isOpen={showModal}
+        title="Employee Created!"
+        message="The employee has been successfully added to the database."
+        onClose={closeModal}
+        confirmText="OK"
+      />
     </div>
   );
 }
