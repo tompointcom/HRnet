@@ -2,9 +2,13 @@ import styles from './CreateEmployee.module.css';
 import { useState } from 'react';
 import { states } from '../../data/states';
 import { ConfirmationModal } from 'p14-modale';
+import { useAppDispatch } from '../../hooks/redux';
+import { addEmployee } from '../../store/slices/employeeSlice';
 
 
 function CreateEmployee() {
+  const dispatch = useAppDispatch();
+
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [dateOfBirth, setDateOfBirth] = useState('');
@@ -32,14 +36,7 @@ function CreateEmployee() {
       department
     };
 
-    // Récupérer les employés existants depuis localStorage
-    const existingEmployees = JSON.parse(localStorage.getItem('employees') || '[]');
-    
-    // Ajouter le nouvel employé
-    const updatedEmployees = [...existingEmployees, newEmployee];
-    
-    // Sauvegarder dans localStorage
-    localStorage.setItem('employees', JSON.stringify(updatedEmployees));
+    dispatch(addEmployee(newEmployee));
     
     // Réinitialiser le formulaire
     setFirstName('');
