@@ -28,8 +28,8 @@ const CurrentEmployees: React.FC = () => {
               </tr>
             </thead>
             <tbody>
-              {employees.map((employee, index) => (
-                <tr key={employee.id || `employee-${index}`}>
+              {employees.map((employee) => (
+                <tr key={employee.id}>
                   <td>{employee.firstName}</td>
                   <td>{employee.lastName}</td>
                   <td>{employee.startDate}</td>
