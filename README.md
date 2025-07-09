@@ -43,7 +43,7 @@ HRnet est une application web permettant aux départements RH de gérer facileme
 ##  Installation
 
 ```bash
-git clone https://github.com/votre-username/P12_Front-end.git
+git clone https://github.com/tompointcom/HRnet.git
 cd P12_Front-end
 npm install
 npm run dev
