@@ -1,69 +1,50 @@
-# React + TypeScript + Vite
+# HRnet - Application de Gestion des Employés
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Une application moderne de gestion des employés développée avec React, TypeScript, Redux Toolkit et Vite.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Aperçu
 
-## Expanding the ESLint configuration
+HRnet est une application web permettant aux départements RH de gérer facilement les informations des employés. L'application offre une interface intuitive pour créer de nouveaux profils d'employés et consulter la liste des employés existants.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Fonctionnalités
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+-  **Création d'employés** : Formulaire pour ajouter un employé
+-  **Liste des employés** : Affichage dans un tableau
+-  **Gestion d'état Redux** : Centralisation des données avec Redux Toolkit
+-  **Validation de formulaire** : Validation HTML5 native
+-  **Modal de confirmation** : Feedback à l'utilisateur après création de l'employé
+-  **Tests complets** : Tests unitaires avec Vitest et Testing Library
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## Technologies utilisées
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Frontend
+- **React 18**
+- **TypeScript**
+- **Vite**
+- **Redux Toolkit**
+- **React Router**
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Styling
+- **CSS Modules**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Testing
+- **Vitest** - Framework de test
+- **Testing Library** - Tests de composants React
+- **@testing-library/jest-dom** - Matchers supplémentaires
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+
+##  Prérequis
+
+- **Node.js** (version 16 ou supérieure)
+- **npm** ou **yarn**
+- **Git**
+
+##  Installation
+
+1. **Cloner le repository**
+```bash
+git clone https://github.com/votre-username/P12_Front-end.git
+cd P12_Front-end
+npm install
+npm run dev
