@@ -236,5 +236,4 @@ function CreateEmployee() {
   );
 }
 
-// Export par défaut du composant
 export default CreateEmployee;
