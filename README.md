@@ -42,7 +42,6 @@ HRnet est une application web permettant aux départements RH de gérer facileme
 
 ##  Installation
 
-1. **Cloner le repository**
 ```bash
 git clone https://github.com/votre-username/P12_Front-end.git
 cd P12_Front-end
